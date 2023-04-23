@@ -4,11 +4,12 @@ import readlineSync from 'readline-sync';
 import chalk from 'chalk';
 import { name } from '../src/cli.js';
 
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
+
 
 const isEven = (number) => number % 2 === 0;
 
 const evenGame = () => {
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const num = Math.floor(Math.random() * 100 + 1);
     console.log(`Question: ${num}`);
