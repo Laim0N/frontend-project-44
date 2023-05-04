@@ -1,4 +1,5 @@
-import { playGame, getRandomInt } from "../../src/index.js";
+import { playGame, getRandomInt } from '../../src/index.js';
+
 const operators = ['+', '-', '*'];
 const randomOperator = () => operators[Math.floor(Math.random() * operators.length)];
 console.log('What is the result of the expression?');
@@ -13,15 +14,14 @@ const generateQuestionAndAnswer = () => {
     case '+':
       correctAnswer = num1 + num2;
       break;
-      case '-':
+    case '-':
       correctAnswer = num1 - num2;
       break;
-     case '*':
+    case '*':
       correctAnswer = num1 * num2;
       break;
     default:
       console.log(`Unknow operator: ${operator}`);
-      return;
   }
   return [question, correctAnswer.toString()];
 };

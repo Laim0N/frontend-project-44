@@ -1,17 +1,19 @@
-import { playGame, getRandomInt } from "../../src/index.js";
-const gcd = (a, b) => {
-  a = Math.abs(a);
-  b = Math.abs(b);
+import { playGame, getRandomInt } from '../../src/index.js';
+
+const gcd = (num1, num2) => {
+  let a = Math.abs(num1);
+  let b = Math.abs(num2);
   if (a === 0) {
     return b;
-  } else if (b === 0) {
+  }
+  if (b === 0) {
     return a;
   }
   while (a !== b) {
     if (a > b) {
-       a = a - b;
+      a -= b;
     } else {
-      b = b - a;
+      b -= a;
     }
   }
   return a;
@@ -25,7 +27,7 @@ const brainGcd = () => {
     const num2 = getRandomInt(1, 100);
     const question = `Question: ${num1} ${num2}`;
     const correctAnswer = gcd(num1, num2);
-    questionsAndAnswers.push([question, correctAnswer.toString()])
+    questionsAndAnswers.push([question, correctAnswer.toString()]);
   }
   playGame(questionsAndAnswers);
 };
