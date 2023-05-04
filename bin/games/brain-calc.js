@@ -1,11 +1,11 @@
-import { randomNum, playGame } from "../src/index.js";
+import { playGame, getRandomInt } from "../../src/index.js";
 const operators = ['+', '-', '*'];
 const randomOperator = () => operators[Math.floor(Math.random() * operators.length)];
 console.log('What is the result of the expression?');
 
 const generateQuestionAndAnswer = () => {
-  const num1 = randomNum();
-  const num2 = randomNum();
+  const num1 = getRandomInt(1, 20);
+  const num2 = getRandomInt(1, 20);
   const operator = randomOperator();
   const question = `Question: ${num1} ${operator} ${num2}`;
   let correctAnswer;
