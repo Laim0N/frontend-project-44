@@ -1,4 +1,4 @@
-import { playGame, getRandomInt } from '../../src/index.js';
+import { playGame, getRandomInt } from '../index.js';
 
 const gcd = (num1, num2) => {
   let a = Math.abs(num1);

@@ -1,4 +1,4 @@
-import { playGame, getRandomInt } from '../../src/index.js';
+import { playGame, getRandomInt } from '../index.js';
 
 const progressionGeneration = () => {
   const progressionStep = getRandomInt(1, 10);
