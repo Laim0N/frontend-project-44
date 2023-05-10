@@ -2,7 +2,6 @@ import { playGame, getRandomInt } from '../index.js';
 
 const operators = ['+', '-', '*'];
 const randomOperator = () => operators[Math.floor(Math.random() * operators.length)];
-console.log('What is the result of the expression?');
 
 const generateQuestionAndAnswer = () => {
   const num1 = getRandomInt(1, 20);
@@ -27,7 +26,7 @@ const generateQuestionAndAnswer = () => {
 };
 
 const brainCalc = () => {
-  console.log('What is the result of the expression?');
+  const description = 'What is the result of the expression?';
   const questionsAndAnswers = [];
   for (let i = 0; i < 3; i += 1) {
     const questionAndAnswer = generateQuestionAndAnswer();
@@ -35,6 +34,7 @@ const brainCalc = () => {
       questionsAndAnswers.push(questionAndAnswer);
     }
   }
+  questionsAndAnswers.push(description);
   playGame(questionsAndAnswers);
 };
 export default brainCalc;

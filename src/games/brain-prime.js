@@ -12,7 +12,6 @@ const isPrime = (number) => {
   return true;
 };
 const primeGame = () => {
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   const questionsAndAnswers = [];
   for (let i = 0; i < 3; i += 1) {
     const randomNum = getRandomInt(1, 1000);
@@ -20,6 +19,7 @@ const primeGame = () => {
     const question = `Question: ${randomNum}`;
     questionsAndAnswers.push([question, correctAnswer]);
   }
+  questionsAndAnswers.push('Answer "yes" if given number is prime. Otherwise answer "no".');
   playGame(questionsAndAnswers);
 };
 export default primeGame;

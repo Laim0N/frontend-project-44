@@ -4,7 +4,9 @@ import { name } from './cli.js';
 
 const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
 const playGame = (questionsAndAnswers) => {
-  for (let i = 0; i < questionsAndAnswers.length; i += 1) {
+  const description = questionsAndAnswers[questionsAndAnswers.length - 1];
+  console.log(description);
+  for (let i = 0; i < questionsAndAnswers.length - 1; i += 1) {
     const [question, correctAnswer] = questionsAndAnswers[i];
     console.log(`${question}`);
     const answer = readlineSync.question('You answer: ');

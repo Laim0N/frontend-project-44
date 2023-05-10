@@ -22,12 +22,12 @@ const progressionGeneration = () => {
 };
 
 const brainProgression = () => {
-  console.log('What number is missing in the progression?');
   const questionsAndAnswers = [];
   for (let i = 0; i < 3; i += 1) {
     const [question, correctAnswer] = progressionGeneration();
     questionsAndAnswers.push([question, correctAnswer]);
   }
+  questionsAndAnswers.push('What number is missing in the progression?');
   playGame(questionsAndAnswers);
 };
 
