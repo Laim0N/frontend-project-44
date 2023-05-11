@@ -5,11 +5,11 @@
   "description": "[![Actions Status](https://github.com/Laim0N/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/Laim0N/frontend-project-44/actions)",
   "bin": {
     "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/games/brain-even.js",
-    "brain-calc": "bin/games/brain-calc.js",
-    "brain-gcd": "bin/games/brain-gcd.js",
-    "brain-progression": "bin/games/brain-progression.js",
-    "brain-prime": "bin/games/brain-prime.js"
+    "brain-even": "bin/even-game.js",
+    "brain-calc": "bin/calc-game.js",
+    "brain-gcd": "bin/gcd-game.js",
+    "brain-progression": "bin/progression-game.js",
+    "brain-prime": "bin/prime-game.js"
   },
   "main": "index.js",
   "scripts": {
