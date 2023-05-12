@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
-import { playGame, getRandomInt } from '../index.js';
+import playGame from '../index.js';
+import getRandomInt from '../random-generator.js';
 
 const isEven = (number) => number % 2 === 0;
 const evenGame = () => {

@@ -1,4 +1,5 @@
-import { playGame, getRandomInt } from '../index.js';
+import playGame from '../index.js';
+import getRandomInt from '../random-generator.js';
 
 const gcd = (num1, num2) => {
   let a = Math.abs(num1);

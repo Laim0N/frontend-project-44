@@ -1,4 +1,5 @@
-import { playGame, getRandomInt } from '../index.js';
+import playGame from '../index.js';
+import getRandomInt from '../random-generator.js';
 
 const operators = ['+', '-', '*'];
 const randomOperator = () => operators[Math.floor(Math.random() * operators.length)];

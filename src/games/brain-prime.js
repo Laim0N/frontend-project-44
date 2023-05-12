@@ -1,4 +1,5 @@
-import { getRandomInt, playGame } from '../index.js';
+import playGame from '../index.js';
+import getRandomInt from '../random-generator.js';
 
 const isPrime = (number) => {
   if (number <= 1) {

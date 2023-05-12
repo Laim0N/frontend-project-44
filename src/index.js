@@ -2,7 +2,6 @@ import readlineSync from 'readline-sync';
 import chalk from 'chalk';
 import { name } from './cli.js';
 
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min) + min);
 const playGame = (questionsAndAnswers) => {
   const description = questionsAndAnswers[questionsAndAnswers.length - 1];
   console.log(description);
@@ -21,4 +20,4 @@ const playGame = (questionsAndAnswers) => {
   console.log(`Congratulation, ${name}!`);
 };
 
-export { getRandomInt, playGame };
+export default playGame;
