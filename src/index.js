@@ -1,6 +1,8 @@
 import readlineSync from 'readline-sync';
 import chalk from 'chalk';
-import { name } from './cli.js';
+import userGreeting from './cli.js';
+
+const name = userGreeting();
 
 const playGame = (questionsAndAnswers) => {
   const description = questionsAndAnswers[questionsAndAnswers.length - 1];
