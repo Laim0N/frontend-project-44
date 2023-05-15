@@ -1,5 +1,3 @@
-import { userGreeting } from '../src/cli.js';
-import brainCalc from '../src/games/brain-calc.js';
+import playGame from '../src/index.js';
 
-userGreeting();
-brainCalc();
+playGame('calc', 3);

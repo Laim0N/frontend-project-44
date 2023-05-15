@@ -1,5 +1,3 @@
-import { userGreeting } from '../src/cli.js';
-import primeGame from '../src/games/brain-prime.js';
+import playGame from '../src/index.js';
 
-userGreeting();
-primeGame();
+playGame('prime', 3);

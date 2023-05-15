@@ -1,5 +1,3 @@
-import { userGreeting } from '../src/cli.js';
-import brainGcd from '../src/games/brain-gcd.js';
+import playGame from '../src/index.js';
 
-userGreeting();
-brainGcd();
+playGame('gcd', 3);
