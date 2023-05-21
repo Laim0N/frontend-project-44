@@ -1,5 +1,6 @@
 import getRandomInt from '../random-generator.js';
 import playGame from '../index.js';
+
 const gcd = (num1, num2) => {
   let a = Math.abs(num1);
   let b = Math.abs(num2);
