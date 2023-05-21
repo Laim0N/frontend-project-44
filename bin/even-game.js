@@ -1,3 +1,4 @@
-import playGame from '../src/index.js';
+#!/usr/bin/env node
+import evenGame from '../src/games/brain-even.js';
 
-playGame('even', 3);
+evenGame();

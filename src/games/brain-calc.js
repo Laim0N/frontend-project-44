@@ -1,10 +1,11 @@
+import playGame from '../index.js';
 import getRandomInt from '../random-generator.js';
 
 const operators = ['+', '-', '*'];
 const randomOperator = () => operators[Math.floor(Math.random() * operators.length)];
+const description = 'What is the result of the expression?';
 
-const brainCalc = () => {
-  const questionsAndAnswer = [];
+const getQuestionAndAnswer = () => {
   const num1 = getRandomInt(1, 20);
   const num2 = getRandomInt(1, 20);
   const operator = randomOperator();
@@ -23,8 +24,8 @@ const brainCalc = () => {
     default:
       console.log(`Unknow operator: ${operator}`);
   }
-  questionsAndAnswer.push(question, correctAnswer.toString());
-  return questionsAndAnswer;
+  return [question, correctAnswer.toString()];
 };
-
-export default brainCalc;
+export default () => {
+  playGame(description, getQuestionAndAnswer);
+};

@@ -1,3 +1,4 @@
+import playGame from '../index.js';
 import getRandomInt from '../random-generator.js';
 
 const isPrime = (number) => {
@@ -11,12 +12,13 @@ const isPrime = (number) => {
   }
   return true;
 };
-const primeGame = () => {
-  const questionsAndAnswer = [];
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const getQuestionAndAnswer = () => {
   const randomNum = getRandomInt(1, 1000);
   const correctAnswer = isPrime(randomNum) ? 'yes' : 'no';
   const question = `Question: ${randomNum}`;
-  questionsAndAnswer.push(question, correctAnswer);
-  return questionsAndAnswer;
+  return [question, correctAnswer];
 };
-export default primeGame;
+export default () => {
+  playGame(description, getQuestionAndAnswer);
+};

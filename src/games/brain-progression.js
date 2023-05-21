@@ -1,3 +1,4 @@
+import playGame from '../index.js';
 import getRandomInt from '../random-generator.js';
 
 const progressionGeneration = () => {
@@ -18,12 +19,12 @@ const progressionGeneration = () => {
   const question = `Question: ${progression.join(' ')}`;
   return [question, answer.toString()];
 };
-
-const brainProgression = () => {
-  const questionsAndAnswer = [];
+const description = 'What number is missing in the progression?';
+const getQuestionAndAnswer = () => {
   const [question, correctAnswer] = progressionGeneration();
-  questionsAndAnswer.push(question, correctAnswer);
-  return questionsAndAnswer;
+  return [question, correctAnswer];
 };
 
-export default brainProgression;
+export default () => {
+  playGame(description, getQuestionAndAnswer);
+};

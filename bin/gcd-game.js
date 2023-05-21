@@ -1,3 +1,4 @@
-import playGame from '../src/index.js';
+#!/usr/bin/env node
+import gcdGame from '../src/games/brain-gcd.js';
 
-playGame('gcd', 3);
+gcdGame();

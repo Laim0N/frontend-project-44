@@ -1,3 +1,4 @@
-import playGame from '../src/index.js';
+#!/usr/bin/env node
+import calcGame from '../src/games/brain-calc.js';
 
-playGame('calc', 3);
+calcGame();

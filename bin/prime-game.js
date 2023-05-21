@@ -1,3 +1,4 @@
-import playGame from '../src/index.js';
+#!/usr/bin/env node
+import primeGame from '../src/games/brain-prime.js';
 
-playGame('prime', 3);
+primeGame();
