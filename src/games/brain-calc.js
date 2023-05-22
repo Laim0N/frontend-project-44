@@ -2,28 +2,33 @@ import playGame from '../index.js';
 import getRandomInt from '../random-generator.js';
 
 const operators = ['+', '-', '*'];
-const randomOperator = () => operators[Math.floor(Math.random() * operators.length)];
+const randomOperator = () => operators[getRandomInt(0, 2)];
 const description = 'What is the result of the expression?';
 
-const getQuestionAndAnswer = () => {
-  const num1 = getRandomInt(1, 20);
-  const num2 = getRandomInt(1, 20);
-  const operator = randomOperator();
-  const question = `Question: ${num1} ${operator} ${num2}`;
+const correctAnswerCalculation = (randomOperand1, operator, randomOperand2) => {
   let correctAnswer;
   switch (operator) {
     case '+':
-      correctAnswer = num1 + num2;
+      correctAnswer = randomOperand1 + randomOperand2;
       break;
     case '-':
-      correctAnswer = num1 - num2;
+      correctAnswer = randomOperand1 - randomOperand2;
       break;
     case '*':
-      correctAnswer = num1 * num2;
+      correctAnswer = randomOperand1 * randomOperand2;
       break;
     default:
-      console.log(`Unknow operator: ${operator}`);
+      console.log('Error!');
   }
+  return correctAnswer;
+};
+
+const getQuestionAndAnswer = () => {
+  const randomOperand1 = getRandomInt(1, 20);
+  const randomOperand2 = getRandomInt(1, 20);
+  const operator = randomOperator();
+  const correctAnswer = correctAnswerCalculation(randomOperand1, operator, randomOperand2);
+  const question = `${randomOperand1} ${operator} ${randomOperand2}`;
   return [question, correctAnswer.toString()];
 };
 export default () => {

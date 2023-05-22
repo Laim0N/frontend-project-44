@@ -9,7 +9,7 @@ const playGame = (description, getQuestionAndAnswer) => {
   console.log(description);
   for (let i = 0; i < rounds; i += 1) {
     const [question, correctAnswer] = getQuestionAndAnswer();
-    console.log(`${question}`);
+    console.log(`Question: ${question}`);
     const answer = readlineSync.question('You answer: ');
     if (answer === correctAnswer) {
       console.log(chalk.green('Correct!'));
