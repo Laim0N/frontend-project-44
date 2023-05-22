@@ -15,7 +15,7 @@ const playGame = (description, getQuestionAndAnswer) => {
       console.log(chalk.green('Correct!'));
     } else {
       console.log(`${answer} is wrong answer ;(. Correct answer was '${correctAnswer}')`);
-      console.log(`Let's try again, ${name}`);
+      console.log(`Let's try again, ${name}!`);
       return;
     }
   }
