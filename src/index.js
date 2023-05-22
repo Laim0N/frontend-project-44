@@ -1,11 +1,11 @@
 import readlineSync from 'readline-sync';
 import chalk from 'chalk';
-import userGreeting from './cli.js';
 
-const name = userGreeting();
-
+const rounds = 3;
 const playGame = (description, getQuestionAndAnswer) => {
-  const rounds = 3;
+  console.log(chalk.yellow('Welcome to the Brain Games!'));
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
   console.log(description);
   for (let i = 0; i < rounds; i += 1) {
     const [question, correctAnswer] = getQuestionAndAnswer();
